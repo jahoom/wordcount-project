@@ -1,0 +1,12 @@
+<h1> Tyle fajnych słów w Twoje wypowiedzi! </h1>
+<h2> A tych słów było {{count}} </h2>
+<a href="{%url 'home'%}">Policz ponownie</a>
+<br />
+Tekst oryginalny:
+{{ fulltext }}
+<br />
+{% for word, counttotal in sortedwords %}
+{{word}}
+<br />
+{{counttotal}}
+{% endfor %}
